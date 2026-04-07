@@ -4,11 +4,17 @@ An end-to-end AI system that enables intelligent search and question answering o
 
 ## 🚀 Features
 🔍 Semantic Search over Video Content
+
 🧠 Question Answering using LLMs
+
 ⏱️ Time-aware Retrieval (timestamp-based queries)
+
 🖼️ Frame-based Visual Search (CLIP)
+
 🔤 OCR-based Text Search inside Frames
+
 📘 Automatic Video Summarization
+
 ⚡ Fast Retrieval using Vector Database (ChromaDB)
 
 ## 🧠 System Architecture
@@ -48,14 +54,23 @@ LLM Answer Generation (Groq - LLaMA 3)
 ```
 ## 🛠️ Tech Stack
 Frontend: Streamlit
+
 LLM: Groq (LLaMA 3.3 70B)
+
 Speech-to-Text: Whisper
+
 Video Processing: OpenCV, FFmpeg
+
 OCR: Tesseract
+
 Embeddings:
+
 SentenceTransformers (text)
+
 OpenCLIP (image)
+
 Vector DB: ChromaDB
+
 Downloader: yt-dlp
 
 ## 📂 Project Structure
@@ -109,39 +124,67 @@ streamlit run app.py
 
 ## 💡 How It Works
 **1. Process Video**
+
 Enter YouTube URL
+
 System extracts:
+
 Audio → transcription
+
 Frames → visual data
+
 OCR → text from images
+
 **2. Ask Questions**
 
 #### Supported queries:
 
 🧠 "What is the main idea?"
+
 ⏱️ "What happens at 2 minutes?"
+
 🖼️ "Show the diagram explained"
+
 📘 "Summarize the video"
+
 🔍 Retrieval Strategy
+
 Hybrid Retrieval:
+
   - Text embeddings
+   
   - OCR embeddings
+    
   - Image embeddings (CLIP)
+    
 Reranking based on:
+
   - Query relevance
+    
   - Semantic importance
+    
   - Temporal position in video
+    
 Time-aware filtering with buffer for better context
 
 ## ⚡ Optimizations
+
 ✅ Caching (Streamlit cache_resource)
+
 ✅ OCR parallelization
+
 ✅ Deduplication of chunks
+
 ✅ Batch image embedding
+
 ✅ Persistent vector DB
 
 ## 📌 Future Improvements
+
 🔥 Real-time streaming support
+
 🔥 Chat history (multi-turn conversation)
+
 🔥 Multi-video search
+
 🔥 Better visual grounding
